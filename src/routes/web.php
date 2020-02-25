@@ -9,9 +9,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use \app\Http\Controllers\Auth\RegisterController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/user/', 'RegisterController@create');
+Route::post('/user/', 'Auth\RegisterController@create');
